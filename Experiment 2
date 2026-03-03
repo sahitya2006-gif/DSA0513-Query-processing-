@@ -1,0 +1,19 @@
+import pandas as pd
+
+# Sample DataFrame
+job_data = {
+    'emp_id': [101, 101, 102, 103, 103, 103],
+    'job_title': ['Developer', 'Senior Developer', 'Analyst',
+                  'Tester', 'Developer', 'Manager']
+}
+
+job_df = pd.DataFrame(job_data)
+
+# Count number of jobs per employee
+job_counts = job_df.groupby('emp_id').size()
+
+# Select employees with 2 or more jobs
+employees_multiple_jobs = job_counts[job_counts >= 2].index
+
+print("Employees who have done two or more jobs:")
+print(list(employees_multiple_jobs))
