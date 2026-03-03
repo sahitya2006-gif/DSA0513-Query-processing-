@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Sample DataFrame (instead of reading file)
+data = {
+    'emp_id': [101, 102, 103, 104, 105],
+    'name': ['Asha', 'Ravi', 'Kiran', 'Meena', 'Arun'],
+    'department_id': [10, 20, 10, 30, 20]
+}
+
+df = pd.DataFrame(data)
+
+# Select distinct department IDs
+distinct_departments = df['department_id'].unique()
+
+print("Distinct Department IDs:")
+print(distinct_departments)
