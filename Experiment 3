@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Input data given directly in the program
+data = {
+    'Date': ['2025-02-03', '2025-02-04', '2025-02-05',
+             '2025-02-10', '2025-02-20', '2025-03-01'],
+    'Close': [333.04, 331.25, 322.86, 310.96, 314.98, 306.52]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Convert Date column to datetime format
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Define date range
+start_date = '2025-02-01'
+end_date = '2025-03-01'
+
+# Filter data between two dates
+filtered_data = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
+
+# Plot line graph
+plt.figure()
+plt.plot(filtered_data['Date'], filtered_data['Close'])
+plt.title("Alphabet Inc Stock Prices")
+plt.xlabel("Date")
+plt.ylabel("Closing Price")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
