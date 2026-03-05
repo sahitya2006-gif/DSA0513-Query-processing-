@@ -1,0 +1,28 @@
+import pandas as pd
+import numpy as np
+
+data = [
+[0.45,-1.22,0.67,-0.12],
+[-0.33,0.88,1.21,-0.55],
+[0.91,-0.44,-1.02,0.36],
+[-0.75,0.54,0.22,-0.89],
+[1.10,-0.60,0.73,0.15],
+[-0.48,0.39,-0.27,0.92],
+[0.62,-1.10,0.48,-0.31],
+[-0.95,0.74,-0.66,0.51],
+[0.28,-0.19,1.35,-0.47],
+[-0.14,0.97,-0.58,0.44]
+]
+
+df = pd.DataFrame(data, columns=['A','B','C','D'])
+
+def color_negative(val):
+    if val < 0:
+        return 'color:red'
+    else:
+        return 'color:black'
+
+print(df)
+
+styled = df.style.applymap(color_negative)
+styled
