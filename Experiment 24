@@ -1,0 +1,10 @@
+# Replace missing values
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.randn(5,3))
+df.iloc[1,1] = np.nan
+df.iloc[3,2] = np.nan
+
+df = df.fillna(0)
+print(df)
