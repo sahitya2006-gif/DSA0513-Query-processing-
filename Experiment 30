@@ -1,0 +1,8 @@
+# Find index of substring in DataFrame column
+import pandas as pd
+
+data = {'Name':['Alice','Bob','Charlie','David']}
+df = pd.DataFrame(data)
+
+result = df[df['Name'].str.contains('ar')].index
+print(result)
