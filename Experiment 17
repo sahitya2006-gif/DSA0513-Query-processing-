@@ -1,0 +1,11 @@
+# 7. Statistical Bar Charts: Vertical Popularity Analysis of Programming Languages
+import matplotlib.pyplot as plt
+
+languages=['Python','Java','C++','JavaScript']
+popularity=[85,70,60,80]
+
+plt.bar(languages,popularity)
+plt.xlabel("Languages")
+plt.ylabel("Popularity")
+plt.title("Programming Language Popularity")
+plt.show()
