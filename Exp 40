@@ -1,0 +1,8 @@
+# Display IDs of employees who have done two or more jobs in the past
+import pandas as pd
+
+df = pd.read_csv("job_history.csv")
+
+result = df.groupby('employee_id').filter(lambda x: len(x) >= 2)
+
+print(result['employee_id'].unique())
