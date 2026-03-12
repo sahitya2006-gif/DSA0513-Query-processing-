@@ -1,0 +1,15 @@
+# 5. Multi-Series Comparison: Plotting Multiple Lines with Custom Aesthetics and Legends
+import matplotlib.pyplot as plt
+
+x=[1,2,3,4,5]
+y1=[10,20,30,40,50]
+y2=[5,15,25,35,45]
+
+plt.plot(x,y1,label="Series 1")
+plt.plot(x,y2,label="Series 2")
+
+plt.xlabel("X")
+plt.ylabel("Values")
+plt.title("Multi Series Plot")
+plt.legend()
+plt.show()
