@@ -1,0 +1,17 @@
+# 10. Python Stacked Bar Plot with Error Bars
+import matplotlib.pyplot as plt
+import numpy as np
+
+labels=['A','B','C','D']
+men=[20,25,30,35]
+women=[15,20,25,30]
+
+x=np.arange(len(labels))
+
+plt.bar(x,men,label='Men',yerr=[2,3,4,1])
+plt.bar(x,women,bottom=men,label='Women',yerr=[1,2,2,1])
+
+plt.xticks(x,labels)
+plt.legend()
+plt.title("Stacked Bar Plot with Error Bars")
+plt.show()
