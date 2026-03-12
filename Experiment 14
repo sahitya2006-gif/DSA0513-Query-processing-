@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = {
+'Date':['2016-10-03','2016-10-10','2016-10-17','2016-10-24','2016-10-31'],
+'Close':[772,778,782,792,800]
+}
+
+df = pd.DataFrame(data)
+df['Date']=pd.to_datetime(df['Date'])
+
+plt.plot(df['Date'],df['Close'])
+plt.xlabel("Date")
+plt.ylabel("Stock Price")
+plt.title("Alphabet Inc Stock Trend Oct 2016")
+plt.show()
