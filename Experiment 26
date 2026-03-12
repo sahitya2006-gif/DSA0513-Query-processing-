@@ -1,0 +1,15 @@
+#Group by school code and check GroupBy type
+import pandas as pd
+
+data = {
+'school_code':['s001','s002','s001','s002','s003'],
+'name':['A','B','C','D','E'],
+'age':[12,13,12,14,13]
+}
+
+df = pd.DataFrame(data)
+
+group = df.groupby('school_code')
+
+print(group)
+print(type(group))
