@@ -1,0 +1,11 @@
+# 8. Horizontal Distribution: Comparing Language Popularity via Horizontal Bar Charts
+import matplotlib.pyplot as plt
+
+languages=['Python','Java','C++','JavaScript']
+popularity=[85,70,60,80]
+
+plt.barh(languages,popularity)
+plt.xlabel("Popularity")
+plt.ylabel("Languages")
+plt.title("Language Popularity Horizontal Chart")
+plt.show()
