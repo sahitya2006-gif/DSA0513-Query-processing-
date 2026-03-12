@@ -1,0 +1,14 @@
+# Line plot of historical stock prices of Alphabet Inc between two dates
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("alphabet_stock_data.csv")
+df['Date'] = pd.to_datetime(df['Date'])
+
+data = df[(df['Date'] >= '2016-10-01') & (df['Date'] <= '2016-10-31')]
+
+plt.plot(data['Date'], data['Close'])
+plt.xlabel("Date")
+plt.ylabel("Stock Price")
+plt.title("Alphabet Stock Price Trend")
+plt.show()
