@@ -1,0 +1,8 @@
+# Select distinct department id from employees file
+import pandas as pd
+
+df = pd.read_csv("employees.csv")
+
+result = df['department_id'].unique()
+
+print(result)
