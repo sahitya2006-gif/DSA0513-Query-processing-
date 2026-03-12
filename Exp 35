@@ -1,0 +1,10 @@
+# Pivot table to find total sale amount region wise, manager wise, salesman wise
+import pandas as pd
+
+df = pd.read_csv("sales_data.csv")
+
+pivot = pd.pivot_table(df, values='Sale_amt',
+                       index=['Region','Manager','Salesman'],
+                       aggfunc='sum')
+
+print(pivot)
