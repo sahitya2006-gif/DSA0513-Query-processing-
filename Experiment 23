@@ -1,0 +1,8 @@
+# Detect missing values (True/False)
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.randn(5,3))
+df.iloc[2,1] = np.nan
+
+print(df.isnull())
